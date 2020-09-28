@@ -12,11 +12,11 @@
 	var canvas2 = document.getElementById('hw22');
 	var ctx2 = canvas2.getContext('2d');
 	var img = new Image();
-	img.src = 'test.jpg';
+	img.src = 'dr.png';
 	img.onload = function() {
 		ctx.drawImage(img, 0, 0);
 	};
-	var grayscale = function() {
+	var graysale = function() {
 		var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 		for(var i = 0; i < imageData.data.length; i += 4){
             var avg = (imageData.data[i] + imageData.data[i + 1] + imageData.data[i + 2]) / 3;  
@@ -28,7 +28,7 @@
 	};
 
 	var grayscalebtn = document.getElementById('btn');
-	grayscalebtn.addEventListener('click', grayscale);
+	grayscalebtn.addEventListener('click', graysale);
 
 </script>
 
